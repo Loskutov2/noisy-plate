@@ -4,7 +4,7 @@ exports.handler = async function (event) {
   const { q, albumToggle } = event.queryStringParameters;
   const client_id = process.env.REACT_APP_CLIENT_ID;
   try {
-    const response = await axios.get(`https://api-v2.soundcloud.com/search/${albumToggle?"playlists":"tracks"}/`, {
+    const response = await axios.get(`https://api-v2.soundcloud.com/search/${albumToggle?"tracks":"playlists"}`, {
       params: {
         client_id,
         limit: 20,
@@ -21,14 +21,14 @@ exports.handler = async function (event) {
     return {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': '*', // Allow any domain
+        'Access-Control-Allow-Origin': '*',
       },
       body: JSON.stringify(items),
     };
   } catch (error) {
     return {
       statusCode: error.response?.status || 500,
-      body: JSON.stringify({ message: "Failed to fetch data." }),
+      body: JSON.stringify({ message: "Failed to fetch data."}),
     };
   }
 };

@@ -6,7 +6,7 @@ import { SearchPage } from "./Pages/SearchPage/SearchPage.tsx";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter basename='/noisy-plate'>
+    <BrowserRouter basename='/'>
       <SearchForm/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
