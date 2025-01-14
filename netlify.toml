@@ -1,7 +1,8 @@
 [build]
   functions = "functions"
+  publish = "build"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/noisy-plate/*"
+  to = "/noisy-plate/index.html"
   status = 200

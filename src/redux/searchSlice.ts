@@ -2,8 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 
-const CLIENT_ID = '57GDonO1e5SInnyt8DyMGWwbrg0AOq1H';
-
 interface Item {
   id: number;
   title: string;
@@ -24,11 +22,11 @@ const initialState:SearchState = {
 };
 
 
-export const searchByQuery = createAsyncThunk<Item[], string>(
+export const searchByQuery = createAsyncThunk<Item[], {q:string, albumToggle:boolean}>(
   'search/searchByQuery',
-  async (query:string, { rejectWithValue }) => {
+  async ({q, albumToggle}, { rejectWithValue }) => {
     try {
-      const response = await axios.get('/.netlify/functions/search', {params: query});
+      const response = await axios.get(`/.netlify/functions/search`, {params: {q, albumToggle}});
       return response.data
     } catch (error) {
       return rejectWithValue('Failed to fetch items.');
@@ -51,7 +49,7 @@ const searchSlice = createSlice({
         state.items = action.payload;
       })
       .addCase(searchByQuery.rejected, (state, action) => {
-        // state.items = [];
+        state.items = [];
         state.error = action.payload as string;
       })
   },

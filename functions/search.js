@@ -1,19 +1,17 @@
 const axios = require("axios");
 
 exports.handler = async function (event) {
-  const { query } = event.queryStringParameters;
-  const CLIENT_ID = "57GDonO1e5SInnyt8DyMGWwbrg0AOq1H";
-
+  const { q, albumToggle } = event.queryStringParameters;
+  const client_id = process.env.REACT_APP_CLIENT_ID;
   try {
-    const response = await axios.get("https://api-v2.soundcloud.com/search", {
+    const response = await axios.get(`https://api-v2.soundcloud.com/search/${albumToggle?"playlists":"tracks"}/`, {
       params: {
-        client_id: CLIENT_ID,
+        client_id,
         limit: 20,
-        q: query,
+        q,
         linked_partitioning: true,
       },
     });
-
     const items = response.data.collection.map((item) => ({
       id: item.id,
       title: item.title,
@@ -22,6 +20,9 @@ exports.handler = async function (event) {
 
     return {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Allow any domain
+      },
       body: JSON.stringify(items),
     };
   } catch (error) {

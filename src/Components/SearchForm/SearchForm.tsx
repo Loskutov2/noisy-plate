@@ -14,7 +14,7 @@ export const SearchForm:React.FC = () => {
     const handleChange= (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault();
         setQuery(e.target.value);
-        dispatch(searchByQuery(e.target.value) as any);
+        dispatch(searchByQuery({ q: e.target.value, albumToggle: false }) as any);
     }
     return(
         <header>
