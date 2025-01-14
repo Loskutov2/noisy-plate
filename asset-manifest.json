@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/noisy-plate/static/js/main.e450572b.js",
+    "index.html": "/noisy-plate/index.html",
+    "main.e450572b.js.map": "/noisy-plate/static/js/main.e450572b.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e450572b.js"
+  ]
+}
