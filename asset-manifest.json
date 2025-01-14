@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/noisy-plate/static/js/main.e450572b.js",
+    "main.js": "/noisy-plate/static/js/main.e3da559f.js",
     "index.html": "/noisy-plate/index.html",
-    "main.e450572b.js.map": "/noisy-plate/static/js/main.e450572b.js.map"
+    "main.e3da559f.js.map": "/noisy-plate/static/js/main.e3da559f.js.map"
   },
   "entrypoints": [
-    "static/js/main.e450572b.js"
+    "static/js/main.e3da559f.js"
   ]
 }
