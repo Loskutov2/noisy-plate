@@ -11,9 +11,10 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "^6.1.13",
-    "web-vitals": "^2.1.3"
+    "web-vitals": "^2.1.3",
+    "webpack": "^5.97.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -41,6 +42,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.3.0",
+    "typescript": "^4.9.5"
   }
 }

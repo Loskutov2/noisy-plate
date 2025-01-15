@@ -15,7 +15,7 @@ exports.handler = async function (event) {
     const items = response.data.collection.map((item) => ({
       id: item.id,
       title: item.title,
-      thumbnail: item.artwork_url || "",
+      thumbnail: item.artwork_url || item.user.avatar_url,
     }));
 
     return {

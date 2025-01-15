@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Miso'; 
+    src: url('./fonts/miso-bold.otf') format('opentype'); 
+}
+@font-face {
+    font-family: 'Patriot'; 
+    src: url('./fonts/patriot/Patriot-Bold.otf') format('opentype'); 
+}
+  
+:root {
+    --background: #ecb977;
+    --primary: #c0131d;
+    --secondary: #ecb977;
+    --border: #60090f;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #c0131d URL("./Texture.png");
+    background-size: 60px;
+    overflow: hidden;
+}

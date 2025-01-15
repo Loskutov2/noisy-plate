@@ -8,18 +8,7 @@ interface Item {
   thumbnail: string;
 }
 
-interface SearchState {
-  items: Item[] | 'pending';
-  loading: boolean;
-  error: string | null;
-}
-
-
-const initialState:SearchState = {
-  items: [],
-  loading: false,
-  error: null,
-};
+const initialState:Item[] = []
 
 
 export const searchByQuery = createAsyncThunk<Item[], {q:string, albumToggle:boolean}>(
@@ -40,18 +29,9 @@ const searchSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(searchByQuery.pending, (state) => {
-        state.items = 'pending';
-        state.error = null;
-      })
-      .addCase(searchByQuery.fulfilled, (state, action) => {
-        console.log(action.payload)
-        state.items = action.payload;
-      })
-      .addCase(searchByQuery.rejected, (state, action) => {
-        state.items = [];
-        state.error = action.payload as string;
-      })
+      .addCase(searchByQuery.pending, state => [])
+      .addCase(searchByQuery.fulfilled, (state, action) => action.payload)
+      .addCase(searchByQuery.rejected, state => [])
   },
 });
 
