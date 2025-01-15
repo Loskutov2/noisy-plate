@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.js": "/noisy-plate/static/js/main.e3da559f.js",
+    "main.css": "/noisy-plate/static/css/main.324082d1.css",
+    "main.js": "/noisy-plate/static/js/main.ad59ad10.js",
+    "static/media/Patriot-Bold.otf": "/noisy-plate/static/media/Patriot-Bold.c47ed86cbea9b3da8554.otf",
+    "static/media/miso-bold.otf": "/noisy-plate/static/media/miso-bold.ce1cc8d5543544047691.otf",
     "index.html": "/noisy-plate/index.html",
-    "main.e3da559f.js.map": "/noisy-plate/static/js/main.e3da559f.js.map"
+    "main.324082d1.css.map": "/noisy-plate/static/css/main.324082d1.css.map",
+    "main.ad59ad10.js.map": "/noisy-plate/static/js/main.ad59ad10.js.map"
   },
   "entrypoints": [
-    "static/js/main.e3da559f.js"
+    "static/css/main.324082d1.css",
+    "static/js/main.ad59ad10.js"
   ]
 }
