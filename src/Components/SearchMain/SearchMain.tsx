@@ -9,10 +9,13 @@ export const SearchMain:React.FC = () => {
             <ul>
                 {useSelector(selectSearched).map((item)=>{
                     return(
+                        <>
+                        <svg width="100%" height="3"><line x1="0" y1="1" x2="100%" y2="3"/></svg>
                         <li key={item.id}>
-                            <p>{item.title}</p>
                             <img src={item.thumbnail} alt="thumbnail"/>
+                            <p>{item.title}</p>
                         </li>
+                        </>
                     )
                     })}
             </ul>

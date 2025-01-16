@@ -9,7 +9,7 @@ import "./globalStyle.css"
 export const root = ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename='/noisy-plate'>
             <App/>
       </BrowserRouter>
     </Provider>
