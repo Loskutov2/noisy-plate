@@ -4,5 +4,14 @@
 
 [[redirects]]
   from = "/noisy-plate/*"
-  to = "/noisy-plate/index.html"
+  to = "noisy-plate/index.html"
   status = 200
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
