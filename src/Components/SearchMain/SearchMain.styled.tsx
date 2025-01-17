@@ -9,7 +9,7 @@ export const SearchResults = styled.main`
         width: 16px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: var(--border);
+      background-color: ${({theme})=>theme.color.border};
       border: 3px solid transparent;
       border-radius: 7px; 
       background-clip: padding-box;
@@ -18,16 +18,14 @@ export const SearchResults = styled.main`
       list-style: none;
       & svg{
         width: 100%;
-        stroke: var(--border);
+        stroke: ${({theme})=>theme.color.border};
         stroke-width: 3px;
       }
       & li{
         display: flex;
         margin-left: 30px;
         margin-top: 10px;
-        margin-left: 30px;
-        width: 100%;
-        perspective: 800px;
+        perspective: 40vw;
         cursor: pointer;
         & p{
           margin: auto 20px;
@@ -37,14 +35,18 @@ export const SearchResults = styled.main`
           height: 100px;
           height: 100px;
           box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
-          transform-style: preserve-3d; 
+          transform-style: preserve-3d;
         }
-        &:hover{
-          img{
-            transform: rotateY(90deg) scaleX(0.9);
-            box-shadow: -3px 0 10px 5px rgba(0,0,0,0.5);
+        @media screen and (min-width:${(p) => p.theme.breakpoints.tablet}){
+          &:hover,&:focus{
+            img{
+              transform: rotateY(90deg) scaleX(0.9) scaleY(1.1);
+              box-shadow: -3px 0 10px 5px rgba(0,0,0,0.5);
+            }
+            box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+            transform: scaleY(0.9);
           }
-      }
+        }
       }
     }
 `

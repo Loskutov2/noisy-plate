@@ -22,7 +22,8 @@ exports.handler = async function (event) {
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*',
-        "Access-Control-Allow-Headers": "Content-Type"
+        "Access-Control-Allow-Headers": "Content-Type",
+        'Cache-Control': 'no-cache',
       },
       body: JSON.stringify(items),
     };
@@ -32,6 +33,7 @@ exports.handler = async function (event) {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Content-Type',
+        'Cache-Control': 'no-cache',
       },
       body: JSON.stringify({ message: "Failed to fetch data." }),
     };

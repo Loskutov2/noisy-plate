@@ -12,7 +12,7 @@ export const Search = styled.form`
         all:unset;
         text-align: left;
         height: 34px;
-        border: solid 3px var(--border);
+        border: solid 3px ${({theme})=>theme.color.border};
         border-radius: 15px;
         width: 30vw;
         padding: 0 35px;
