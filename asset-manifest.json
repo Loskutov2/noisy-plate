@@ -1,14 +1,11 @@
 {
   "files": {
-    "main.css": "/noisy-plate/static/css/main.88f7b9e2.css",
-    "main.js": "/noisy-plate/static/js/main.d120e183.js",
-    "static/media/Texture.svg": "/noisy-plate/static/media/Texture.fefd20c16d7a256ee8a8.svg",
+    "main.js": "/noisy-plate/static/js/main.1f1360b5.js",
+    "static/media/texture.svg": "/noisy-plate/static/media/texture.77ae538eea1dd1bb68fab76902de3df9.svg",
     "index.html": "/noisy-plate/index.html",
-    "main.88f7b9e2.css.map": "/noisy-plate/static/css/main.88f7b9e2.css.map",
-    "main.d120e183.js.map": "/noisy-plate/static/js/main.d120e183.js.map"
+    "main.1f1360b5.js.map": "/noisy-plate/static/js/main.1f1360b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.88f7b9e2.css",
-    "static/js/main.d120e183.js"
+    "static/js/main.1f1360b5.js"
   ]
 }
