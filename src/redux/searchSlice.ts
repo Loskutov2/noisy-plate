@@ -15,7 +15,7 @@ export const searchByQuery = createAsyncThunk<Item[], {q:string, albumToggle:boo
   'search/searchByQuery',
   async ({q, albumToggle}, { rejectWithValue }) => {
     try {
-      const response = await axios.get("https://noisyplate.netlify.app/.netlify/functions/aiSearch", {params: {q, albumToggle}});
+      const response = await axios.get("https://noisyplate.netlify.app/.netlify/functions/search", {params: {q, albumToggle}});
       return response.data
     } catch (error) {
       return rejectWithValue('Failed to fetch items.');

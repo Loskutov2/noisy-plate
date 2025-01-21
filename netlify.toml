@@ -4,7 +4,7 @@
 
 [[redirects]]
   from = "/noisy-plate/*"
-  to = "noisy-plate/index.html"
+  to = "/noisy-plate/index.html"
   status = 200
 
 [functions]

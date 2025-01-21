@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://loskutov2.github.io/noisy-plate",
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "@reduxjs/toolkit": "^2.5.0",
     "@testing-library/react": "^14.0.0",
     "axios": "^1.7.9",
